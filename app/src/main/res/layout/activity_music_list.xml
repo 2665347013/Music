@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_music_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ma_bj">
+
+    <RadioGroup
+        android:id="@+id/rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#869daf"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_mllb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:text="目录列表"
+            android:textColor="#fff"
+            android:textSize="22dp"/>
+        <RadioButton
+            android:id="@+id/rb_grzx"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:text="个人中心"
+            android:textColor="#fff"
+            android:textSize="22dp"/>
+    </RadioGroup>
+
+    <com.eq.music.MyViewPager
+        android:id="@+id/looper_pager"
+        android:layout_below="@+id/rg_menu"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <LinearLayout
+        android:id="@+id/points_container"
+        android:layout_below="@+id/rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="190dp">
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/points_container"
+        android:layout_marginTop="50dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"></GridView>
+
+</RelativeLayout>

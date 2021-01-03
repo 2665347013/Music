@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ma_bj"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/te_yh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户注册"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/re_ll1"
+        android:layout_below="@+id/te_yh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/re_et_name"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textSize="20dp"
+            android:background="@drawable/edit_background"
+            android:paddingLeft="7dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/re_ll2"
+        android:layout_below="@+id/re_ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="密码"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/re_et_password"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="20dp"
+            android:background="@drawable/edit_background"
+            android:paddingLeft="7dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/re_ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re_ll2"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/re_ll4"
+        android:layout_below="@+id/re_ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="所在地"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <Spinner
+            android:id="@+id/re_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:entries="@array/professionals"
+            android:spinnerMode="dialog"
+            android:background="@drawable/shape_button" />
+    </LinearLayout>
+    <Button
+        android:onClick="click_register"
+        android:layout_below="@+id/re_ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="注册"
+        android:background="@drawable/shape_button"/>
+</RelativeLayout>
